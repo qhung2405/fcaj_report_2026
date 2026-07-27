@@ -1,19 +1,23 @@
 ---
-title: "Blogs Posted"
-date: 2024-01-01
-weight: 3
-chapter: false
-pre: " <b> 3. </b> "
+title : "Blogs Posted"
+date : "2026-07-27"
+weight : 3
+chapter : false
+pre : " <b> 3. </b> "
 ---
 
+# Blogs Posted
 
-This section will list and introduce the blogs you have posted to [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). For example:
+Below are the blog posts I published on [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj) throughout my internship at Amazon Web Services Vietnam.
 
-###  [Blog 1 - SESSION POLICIES IN AMAZON EKS POD IDENTITY](3.1-Blog1/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+### [Blog 1 - INTRODUCING AMAZON VPC REGIONAL NAT GATEWAY](3.1-blog1/)
 
-###  [Blog 2 - ...](3.2-Blog2/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+This blog introduces the new operating mode of AWS NAT Gateway – Regional NAT Gateway (RNAT), which lets a single NAT Gateway automatically expand and contract across multiple Availability Zones within the same VPC. This is a significant step forward that greatly simplifies network infrastructure management compared to the previous per-AZ NAT Gateway model.
 
-###  [Blog 3 - ...](3.3-Blog3/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+### [Blog 2 - BENEFITS OF REGIONAL NAT GATEWAY: SECURITY, SCALING, AND IPAM INTEGRATION](3.2-blog2/)
+
+This blog takes a deeper look at the benefits of Regional NAT Gateway in terms of security, automatic scaling to prevent port exhaustion, and integration with VPC IPAM for controlled IP address management. The post also covers CloudWatch monitoring capabilities and integration with traffic inspection solutions such as AWS Network Firewall.
+
+### [Blog 3 - WHAT IS AMAZON EVENTBRIDGE? BUILDING EVENT-DRIVEN APPLICATIONS ON AWS](3.3-blog3/)
+
+This blog introduces Amazon EventBridge – a serverless service for building event-driven architecture on AWS. The post analyzes the two main mechanisms, Event bus and Pipes, how they work together, and the role of EventBridge Scheduler in automating scheduled tasks.

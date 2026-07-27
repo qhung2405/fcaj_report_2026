@@ -1,28 +1,31 @@
 ---
-title: "Blog 2"
-date: 2024-01-01
-weight: 1
-chapter: false
-pre: " <b> 3.2. </b> "
+title : "Blog 2"
+date : "2026-07-27"
+weight : 2
+chapter : false
+pre : " <b> 3.2. </b> "
 ---
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# BENEFITS OF REGIONAL NAT GATEWAY: SECURITY, SCALING, AND IPAM INTEGRATION
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+Beyond simplifying network architecture, Regional NAT Gateway (RNAT) also brings practical benefits in security, automatic scaling, and integration with AWS IP management tools.
 
-Key points to know:
+![Blog 2]({{< relURL "images/image2.png" >}})
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+### Key points to know
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+- Improved security: since no public subnet is needed to host the NAT Gateway, security-conscious organizations can completely eliminate the risk of accidentally deploying sensitive resources into a public subnet.
+- Automatic protection against port exhaustion: each IP address assigned to RNAT supports up to 55,000 concurrent connections to a single destination; as it approaches this threshold, RNAT automatically provisions additional IPs (up to 32 IPs per AZ).
+- VPC IPAM integration: RNAT can automatically draw IP addresses from an IPAM pool when expanding into a new AZ or scaling due to increased traffic, making IP allocation more controlled and predictable.
+- Manual control when needed: users can choose manual mode to manage AZs and Elastic IPs themselves instead of relying fully on RNAT automation.
+- CloudWatch monitoring support: RNAT emits metrics similar to zonal NAT Gateway for each AZ, along with additional log fields such as resource-id and az-id for easier tracking.
+- Flexible routing: RNAT's route table allows inserting AWS Network Firewall or Gateway Load Balancer between the private subnet and the NAT Gateway to inspect traffic before it reaches the internet.
 
-...Image...
+IP scaling is fairly elastic: adding more IPs takes about 5 minutes and starts once concurrent connections to the same destination exceed roughly 40,000; conversely, the system only scales back down once connections drop below 20,000 for about an hour. This "scale up fast, scale down slow" design prioritizes availability over immediate resource savings.
 
-...Link...
+---
 
-...Guide...
+### References
+
+- [Introducing Amazon VPC Regional NAT Gateway – AWS Blog](https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-amazon-vpc-regional-nat-gateway)
+- [Amazon VPC IP Address Manager (IPAM) Documentation](https://docs.aws.amazon.com/vpc/latest/ipam/how-it-works-ipam.html)

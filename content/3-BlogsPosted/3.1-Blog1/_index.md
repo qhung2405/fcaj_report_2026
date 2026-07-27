@@ -1,28 +1,30 @@
 ---
-title: "Blog 1"
-date: 2024-01-01
-weight: 1
-chapter: false
-pre: " <b> 3.1. </b> "
+title : "Blog 1"
+date : "2026-07-27"
+weight : 1
+chapter : false
+pre : " <b> 3.1. </b> "
 ---
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# INTRODUCING AMAZON VPC REGIONAL NAT GATEWAY
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+AWS NAT Gateway is a fully managed, highly available Network Address Translation (NAT) service that lets resources in a private subnet initiate outbound connections without needing their own public IP address. In November 2025, AWS announced a new operating mode for NAT Gateway: Regional NAT Gateway (RNAT) — allowing a single NAT Gateway to automatically expand and contract across multiple Availability Zones (AZs) within the same VPC, instead of requiring a separate deployment per AZ as before.
 
-Key points to know:
+![Blog 1]({{< relURL "images/image1.png" >}})
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+### Key points to know
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+- Previously, each AZ required its own NAT Gateway placed in its own public subnet, and the process had to be repeated every time you expanded into a new AZ.
+- Regional NAT Gateway operates at the VPC level rather than the subnet/AZ level, significantly reducing the number of components to manage.
+- RNAT does not require a public subnet in every AZ to reside in.
+- When expanding to a new AZ, you can reuse the same route table and the same NAT Gateway ID instead of creating a new one.
+- RNAT automatically maintains "zonal affinity" (preferring same-AZ routing) to ensure high availability while simplifying the architecture.
 
-...Image...
+In essence, Regional NAT Gateway solves a common operational problem: duplicating NAT infrastructure per AZ, which is time-consuming to configure and complicates route tables. With RNAT, infrastructure teams only need to manage a single NAT Gateway entity for the entire VPC, making it simpler and more consistent to scale applications across multiple AZs.
 
-...Link...
+---
 
-...Guide...
+### References
+
+- [Introducing Amazon VPC Regional NAT Gateway – AWS Blog](https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-amazon-vpc-regional-nat-gateway)
+- [Amazon VPC NAT Gateway Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html)

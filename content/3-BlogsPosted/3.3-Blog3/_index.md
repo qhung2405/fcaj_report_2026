@@ -1,28 +1,31 @@
 ---
-title: "Blog 3"
-date: 2024-01-01
-weight: 1
-chapter: false
-pre: " <b> 3.3. </b> "
+title : "Blog 3"
+date : "2026-07-27"
+weight : 3
+chapter : false
+pre : " <b> 3.3. </b> "
 ---
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# WHAT IS AMAZON EVENTBRIDGE? BUILDING EVENT-DRIVEN APPLICATIONS ON AWS
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+Amazon EventBridge is a serverless service that connects application components together by generating and processing events. It is the foundation for building event-driven architecture — a design style in which components communicate by emitting and responding to events rather than calling each other directly, making systems more flexible and easier to scale.
 
-Key points to know:
+![Blog 3]({{< relURL "images/image3.png" >}})
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+### Key points to know
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+- EventBridge provides two main mechanisms for processing and forwarding events: Event bus and Pipes.
+- An event bus acts as a router, receiving events from multiple sources (custom-built applications, AWS services, third-party software) and delivering them to multiple destinations, optionally transforming the data before delivery.
+- Pipes are suited for point-to-point integration: each pipe receives events from a single source and delivers them to a single destination, but supports more advanced data transformation and enrichment.
+- Pipes and event buses are often used together: a pipe can receive data from a DynamoDB Stream and send it to an event bus, which then distributes it to multiple destinations according to configured rules.
+- EventBridge also includes EventBridge Scheduler — a serverless scheduler that lets you create, run, and manage tasks on a schedule (cron or rate expression) or as one-time tasks, with configurable flexible time windows and retry limits.
 
-...Image...
+In essence, EventBridge solves a problem commonly faced when building microservice systems: how components can "know" about events happening elsewhere without calling each other's APIs directly. Instead of writing complex back-and-forth call logic, a service simply publishes an event to the event bus, and interested services register rules to receive the exact event types they need. This approach makes it easy to add or remove components without affecting the rest of the system — well suited to projects that need scalability and easy long-term maintenance.
 
-...Link...
+---
 
-...Guide...
+### References
+
+- [What Is Amazon EventBridge? – AWS Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
+- [Amazon EventBridge Event Buses – AWS Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus.html)
+- [Amazon EventBridge Pipes – AWS Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes.html)

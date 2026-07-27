@@ -10,7 +10,7 @@ pre : " <b> 3.1. </b> "
 
 AWS NAT Gateway là dịch vụ dịch địa chỉ mạng (NAT) được quản lý hoàn toàn, có tính sẵn sàng cao, giúp các tài nguyên trong private subnet có thể khởi tạo kết nối ra ngoài mà không cần địa chỉ IP công khai riêng. Vào tháng 11/2025, AWS công bố một chế độ hoạt động mới cho NAT Gateway: Regional NAT Gateway (RNAT) — cho phép một NAT Gateway duy nhất tự động mở rộng và thu hẹp phạm vi hoạt động qua nhiều Availability Zone (AZ) trong cùng một VPC, thay vì phải triển khai riêng lẻ theo từng AZ như trước.
 
-![Blog 1](/images/image1.png)
+![Blog 1]({{< relURL "images/image1.png" >}})
 
 ### Những điểm chính cần biết
 
