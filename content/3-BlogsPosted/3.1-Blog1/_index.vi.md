@@ -6,21 +6,40 @@ chapter : false
 pre : " <b> 3.1. </b> "
 ---
 
-# GIỚI THIỆU AMAZON VPC REGIONAL NAT GATEWAY
+# Nên tiếp tục dùng Zonal NAT Gateway hay chuyển sang Regional NAT Gateway (RNAT)? 
 
-AWS NAT Gateway là dịch vụ dịch địa chỉ mạng (NAT) được quản lý hoàn toàn, có tính sẵn sàng cao, giúp các tài nguyên trong private subnet có thể khởi tạo kết nối ra ngoài mà không cần địa chỉ IP công khai riêng. Vào tháng 11/2025, AWS công bố một chế độ hoạt động mới cho NAT Gateway: Regional NAT Gateway (RNAT) — cho phép một NAT Gateway duy nhất tự động mở rộng và thu hẹp phạm vi hoạt động qua nhiều Availability Zone (AZ) trong cùng một VPC, thay vì phải triển khai riêng lẻ theo từng AZ như trước.
+Nếu hệ thống của bạn có nhiều Private Subnets ở các Availability Zone (AZ) khác nhau cần ra Internet, từ trước đến nay chúng ta thường chỉ có 2 lựa chọn — và lựa chọn nào cũng có nhược điểm:
+1. Dùng 1 NAT Gateway duy nhất cho 1 AZ (Point toàn bộ route về nó):
+- Dính phí Cross-AZ Data Transfer Cost. Traffic outbound càng lớn, bill cuối tháng càng lớn.
+- Mất tính High Availability (HA).  Nếu AZ chứa NAT Gateway bị sập thi toàn bộ Private Subnets ở các AZ khác lập tức không kết nối ra được Internet.
+ 2. Mỗi AZ có 1 con NAT Gateway riêng:
+-	Giải quyết được bài toán HA và Cross-AZ Data Transfer...
+-	Nhưng tốn tiền duy trì cố định (Hourly rate) cho tối thiểu 2-3 con NAT cùng lúc, dù traffic ở một số AZ có thể cực kỳ ít.
+
+ ## Bước ngoặt từ AWS: Regional NAT Gateway (RNAT). 
+ Để giải quyết sự khó chịu này, AWS đã ra mắt Regional NAT Gateway (RNAT) hoạt động ở cấp độ VPC với các lợi ích:
+
+1. Với Rnat bạn đã có thể: 
+- Tạo chỉ 1 con NAT và vẫn duy trì HA tự động: Không còn nỗi lo Single Point of Failure (SPOF) vì AWS tự quản lý tính sẵn sàng đa AZ ở phía sau.
+- Chỉ cần 1 Route Table duy nhất trỏ 0.0.0.0/0 về RNAT cho toàn bộ VPC, không cần phân tách Route Table phức tạp theo từng AZ.
+- Bài toán AZ không còn phức tạp
+
+2. RNAT mang danh nghĩa là một tài nguyên cấp Region, nhưng bên dưới hạ tầng vật lý nó lại được phân tán trên nhiều AZ. Nhờ kiến trúc này, AWS sẽ tự động đảm nhận 3 việc mà trước đây team DevOps phải tự làm thủ công:
+- Tự động phát hiện sự cố: Nhận biết ngay lập tức nếu một hạ tầng/AZ gặp trục trặc.
+
+- Tự động điều hướng lưu lượng: Lập tức lái traffic sang hạ tầng khỏe mạnh mà không làm gián đoạn kết nối.
+
+- Tự động co giãn theo tải: Tự tăng/giảm năng lượng xử lý tùy thuộc vào lượng outbound traffic thực tế của hệ thống.
+
+3. Tiết kiệm chi phí:
+
+- Giảm số lượng NAT Gateway phải quản lý nên sẽ giảm thiểu phí duy trì theo giờ.
+
+- Triệt tiêu phí Cross-AZ Data Processing: Không còn những khoản phí "chui" ẩn mình dưới dạng Cross-AZ Data Transfer ở cuối tháng.
+
+- Hóa đơn minh bạch: Outbound traffic đi qua đâu, tính tiền ở đó, không còn sự chồng chéo phức tạp giữa các AZ.
 
 ![Blog 1]({{< relURL "images/image1.png" >}})
-
-### Những điểm chính cần biết
-
-- Trước đây, mỗi AZ cần một NAT Gateway riêng, đặt trong public subnet riêng, và phải lặp lại quy trình này mỗi khi mở rộng sang AZ mới.
-- Regional NAT Gateway hoạt động ở cấp độ VPC thay vì cấp độ subnet/AZ, giúp giảm đáng kể số lượng thành phần cần quản lý.
-- RNAT không yêu cầu phải có public subnet trong mọi AZ để lưu trú.
-- Khi mở rộng sang AZ mới, người dùng có thể tái sử dụng cùng một route table và cùng một NAT Gateway ID thay vì tạo mới.
-- RNAT tự động duy trì "zonal affinity" (ưu tiên định tuyến trong cùng AZ) để đảm bảo tính sẵn sàng cao trong khi vẫn đơn giản hóa kiến trúc.
-
-Về bản chất, Regional NAT Gateway giải quyết một vấn đề vận hành thường gặp: việc phải nhân bản hạ tầng NAT theo từng AZ gây tốn kém thời gian cấu hình và làm phức tạp hệ thống route table. Với RNAT, đội ngũ hạ tầng chỉ cần quản lý một thực thể NAT Gateway duy nhất cho toàn VPC, giúp việc mở rộng quy mô ứng dụng sang nhiều AZ trở nên đơn giản và nhất quán hơn.
 
 ---
 

@@ -6,22 +6,35 @@ chapter : false
 pre : " <b> 3.3. </b> "
 ---
 
-# WHAT IS AMAZON EVENTBRIDGE? BUILDING EVENT-DRIVEN APPLICATIONS ON AWS
+# Should Services Call Each Other Directly, or Move to an Event-Driven Architecture with EventBridge?
 
-Amazon EventBridge is a serverless service that connects application components together by generating and processing events. It is the foundation for building event-driven architecture — a design style in which components communicate by emitting and responding to events rather than calling each other directly, making systems more flexible and easier to scale.
+If your system has multiple services that need to "know" about events happening elsewhere, you traditionally only had two approaches — and both leave you with operational baggage:
+
+1. **Calling services directly via API (tight coupling):**
+   - Every time you add a new service that needs certain information, you have to update the calling logic everywhere that's affected.
+   - If a destination service fails or responds slowly, the calling service is affected too, easily causing a chain reaction across the whole system.
+2. **Writing your own cron jobs or periodic sync scripts:**
+   - This reduces direct dependency between services...
+   - ... But you still have to manage the schedules yourself, logic often ends up duplicated, and it becomes hard to track the full event flow across the system as the number of services grows.
+
+---
+
+## The AWS Turning Point: Amazon EventBridge
+
+To solve this problem, AWS provides Amazon EventBridge — a serverless service built for event-driven architecture, offering the following benefits:
+
+1. **With EventBridge you can:**
+   - Fully decouple services from one another: a service simply publishes an event, and any interested services register their own rules to receive exactly the event types they need, with no direct calls required.
+   - Add or remove a service from the system without affecting the rest of it.
+2. **EventBridge provides two main mechanisms, each solving a different problem:**
+   - Event bus acts as a central router, receiving events from multiple sources (custom-built applications, AWS services, third-party software) and delivering them to multiple destinations, optionally transforming the data before delivery.
+   - Pipes are suited for point-to-point integration: each pipe receives events from a single source and delivers them to a single destination, but supports more advanced data transformation and enrichment.
+   - The two are often used together: a pipe can receive data from a DynamoDB Stream and send it to an event bus, which then distributes it to multiple destinations according to configured rules.
+3. **No More Manual Cron Jobs:**
+   - EventBridge Scheduler is a serverless scheduler that lets you create, run, and manage tasks on a schedule (cron or rate expression) or as one-time tasks, with configurable flexible time windows and retry limits — fully replacing the need to manage cron jobs manually.
+
 
 ![Blog 3]({{< relURL "images/image3.png" >}})
-
-### Key points to know
-
-- EventBridge provides two main mechanisms for processing and forwarding events: Event bus and Pipes.
-- An event bus acts as a router, receiving events from multiple sources (custom-built applications, AWS services, third-party software) and delivering them to multiple destinations, optionally transforming the data before delivery.
-- Pipes are suited for point-to-point integration: each pipe receives events from a single source and delivers them to a single destination, but supports more advanced data transformation and enrichment.
-- Pipes and event buses are often used together: a pipe can receive data from a DynamoDB Stream and send it to an event bus, which then distributes it to multiple destinations according to configured rules.
-- EventBridge also includes EventBridge Scheduler — a serverless scheduler that lets you create, run, and manage tasks on a schedule (cron or rate expression) or as one-time tasks, with configurable flexible time windows and retry limits.
-
-In essence, EventBridge solves a problem commonly faced when building microservice systems: how components can "know" about events happening elsewhere without calling each other's APIs directly. Instead of writing complex back-and-forth call logic, a service simply publishes an event to the event bus, and interested services register rules to receive the exact event types they need. This approach makes it easy to add or remove components without affecting the rest of the system — well suited to projects that need scalability and easy long-term maintenance.
-
 ---
 
 ### References
