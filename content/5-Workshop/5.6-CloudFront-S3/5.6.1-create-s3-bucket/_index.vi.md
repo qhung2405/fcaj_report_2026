@@ -22,13 +22,13 @@ Trong bước này, chúng ta sẽ khởi tạo một **Amazon S3 Bucket** đón
 | **AWS Region** | `us-east-1` (US East - N. Virginia) | Chọn cùng Region với các tài nguyên workshop |
 | **Object Ownership** | `ACLs disabled (recommended)` | Khuyên dùng bởi AWS để đơn giản quản lý quyền |
 
-![Tạo S3 Bucket - Thông tin cơ bản](/images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-create-1.png)
+![Tạo S3 Bucket - Thông tin cơ bản]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-create-1.png" >}})
 
 4. **Block Public Access settings for this bucket**:
    - Tích chọn **Block *all* public access**.
    - *Lý do*: Chúng ta tuân thủ chuẩn bảo mật AWS. Dữ liệu tĩnh sẽ không được mở trực tiếp ra ngoài Internet mà chỉ cho phép duy nhất CloudFront CDN truy cập thông qua OAC.
 
-![Block All Public Access](/images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-block-public.png)
+![Block All Public Access]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-block-public.png" >}})
 
 5. Các mục còn lại (**Bucket Versioning**, **Default encryption**) giữ nguyên mặc định (Default encryption: SSE-S3).
 6. Cuối cùng, cuộn xuống dưới và chọn **Create bucket**.
@@ -43,7 +43,7 @@ Sau khi Bucket được tạo thành công:
 2. Tại tab **Objects**, chọn nút **Upload**.
 3. Bạn có thể kéo thả toàn bộ thư mục `dist` hoặc các file của dự án **Perfume** (bao gồm `index.html`, thư mục `assets/`, `css/`, `js/`, hình ảnh...) vào khung upload.
 
-![Upload Frontend Code lên S3](/images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-upload.png)
+![Upload Frontend Code lên S3]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-upload.png" >}})
 
 4. Hoặc sử dụng **AWS CLI** từ máy cục bộ để đồng bộ code lên S3:
 
@@ -54,4 +54,4 @@ aws s3 sync ./perfume/dist s3://monaperfume-frontend-bucket-2026/ --delete
 
 5. Kiểm tra đảm bảo file `index.html` nằm ngay tại thư mục gốc (Root) của S3 Bucket.
 
-![Danh sách Object sau khi upload](/images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-objects-list.png)
+![Danh sách Object sau khi upload]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-objects-list.png" >}})

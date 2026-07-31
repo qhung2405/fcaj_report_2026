@@ -20,7 +20,7 @@ In this step, we will apply an **S3 Bucket Policy** granting read access exclusi
 
 2. Click the **Copy policy** button right next to it.
 
-![Copy Policy from CloudFront Console](/images/5-Workshop/5.6-CloudFront-S3/5.6.3-copy-policy-banner.png)
+![Copy Policy from CloudFront Console]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.3-copy-policy-banner.png" >}})
 
 ---
 
@@ -31,7 +31,7 @@ In this step, we will apply an **S3 Bucket Policy** granting read access exclusi
 3. Go to the **Permissions** tab.
 4. Scroll down to **Bucket policy** and click **Edit**.
 
-![S3 Edit Bucket Policy](/images/5-Workshop/5.6-CloudFront-S3/5.6.3-s3-edit-policy.png)
+![S3 Edit Bucket Policy]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.3-s3-edit-policy.png" >}})
 
 5. Paste the policy JSON copied from Step 1. Standard OAC bucket policy format:
 

@@ -17,7 +17,7 @@ This final step verifies the complete setup of CloudFront and S3 for the **MonaP
 3. Under the **Details** tab, locate **Distribution domain name**.
 4. Copy the URL formatted like: **`https://d111111abcdef8.cloudfront.net`**
 
-![CloudFront Domain Name](/images/5-Workshop/5.6-CloudFront-S3/5.6.4-cloudfront-domain.png)
+![CloudFront Domain Name]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.4-cloudfront-domain.png" >}})
 
 ---
 
@@ -26,13 +26,13 @@ This final step verifies the complete setup of CloudFront and S3 for the **MonaP
 1. Open a web browser (Chrome, Edge, or Firefox) and paste `https://d111111abcdef8.cloudfront.net` into the address bar.
 2. Confirm that the **MonaPerfume** website renders correctly with all styling, scripts, and image assets.
 
-![Verify Perfume Website via CloudFront CDN](/images/5-Workshop/5.6-CloudFront-S3/5.6.4-website-preview.png)
+![Verify Perfume Website via CloudFront CDN]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.4-website-preview.png" >}})
 
 3. Press **F12** to open Developer Tools -> **Network** tab:
    - Select an asset (e.g., image or css file).
    - Inspect Response Headers for **`x-cache: Hit from cloudfront`** (or **`Miss from cloudfront`** on first load).
 
-![Response Header x-cache from CloudFront](/images/5-Workshop/5.6-CloudFront-S3/5.6.4-network-headers.png)
+![Response Header x-cache from CloudFront]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.4-network-headers.png" >}})
 
 ---
 
@@ -43,13 +43,13 @@ When redeploying updated frontend code for the Perfume application to S3, CloudF
 1. In the CloudFront Distribution details page, go to the **Invalidations** tab.
 2. Click **Create invalidation**.
 
-![Create CloudFront Invalidation](/images/5-Workshop/5.6-CloudFront-S3/5.6.4-create-invalidation.png)
+![Create CloudFront Invalidation]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.4-create-invalidation.png" >}})
 
 3. In **Object paths**, enter:
    - **`/*`** *(To purge all cached files site-wide)*
    - Or specific paths like **`/index.html`**
 
-![Configure Object Paths Invalidation](/images/5-Workshop/5.6-CloudFront-S3/5.6.4-invalidation-path.png)
+![Configure Object Paths Invalidation]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.4-invalidation-path.png" >}})
 
 4. Click **Create invalidation**.
 5. Wait for the status to change from `In progress` to `Completed`. End-users will immediately receive the updated frontend build.

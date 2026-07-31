@@ -18,7 +18,7 @@ AWS đã cập nhật giao diện tạo CloudFront Distribution theo từng bư�
 2. Chọn nút **Create distribution**.
 3. Tại giao diện **Choose a plan**, chọn gói **Free ($0/month)**:
 
-![Giao diện chọn gói CloudFront Free Tier](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-choose-plan.png)
+![Giao diện chọn gói CloudFront Free Tier]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-choose-plan.png" >}})
 
 4. Nhấp nút **Next** để tiếp tục.
 
@@ -29,7 +29,7 @@ AWS đã cập nhật giao diện tạo CloudFront Distribution theo từng bư�
 1. Kiểm tra thông tin tổng quan của Distribution.
 2. Đặt tên mô tả cho Distribution (hoặc giữ tên mặc định do AWS gợi ý).
 
-![Giao diện đặt tên cho Distribution](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-name.png)
+![Giao diện đặt tên cho Distribution]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-name.png" >}})
 
 3. Nhấp **Next** để chuyển sang bước tiếp theo.
 
@@ -46,7 +46,7 @@ AWS đã cập nhật giao diện tạo CloudFront Distribution theo từng bư�
    - Origin settings: Chọn **Use recommended origin settings**.
    - Cache settings: Chọn **Use recommended cache settings tailored to serving S3 content**
 
-![Cấu hình Origin Domain và OAC](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-specify-origin.png)
+![Cấu hình Origin Domain và OAC]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-specify-origin.png" >}})
 
 5. Nhấp nút **Next**.
 
@@ -57,7 +57,7 @@ AWS đã cập nhật giao diện tạo CloudFront Distribution theo từng bư�
 1. Xem lại thiết lập bảo mật (WAF / DDoS protection đã được tích hợp sẵn trong gói Free).
 2. Giữ cấu hình mặc định và chọn **Next**.
 
-![Cấu hình Bảo mật](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-security.png)
+![Cấu hình Bảo mật]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-security.png" >}})
 
 ---
 
@@ -66,7 +66,7 @@ AWS đã cập nhật giao diện tạo CloudFront Distribution theo từng bư�
 1. Rà soát lại toàn bộ thông tin cấu hình từ Step 1 đến Step 5.
 2. Cuộn xuống cuối trang và nhấp nút **Create distribution**.
 
-![Kiểm tra thông tin và chọn Create Distribution](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-review-create.png)
+![Kiểm tra thông tin và chọn Create Distribution]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-review-create.png" >}})
 
 ---
 
@@ -76,7 +76,7 @@ AWS đã cập nhật giao diện tạo CloudFront Distribution theo từng bư�
 2. Kéo xuống phần Default root object, thêm vào tên file **index.html**
 3. Chọn **Save changes**.
 
-![Thêm rootfile](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-edit-setting.png)
+![Thêm rootfile]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-edit-setting.png" >}})
 
 ---
 
@@ -90,4 +90,4 @@ AWS đã cập nhật giao diện tạo CloudFront Distribution theo từng bư�
    - **HTTP response code**: `200: OK`
 3. Nhấp **Create custom error response**.
 
-![Cấu hình Custom Error Page](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-error-pages.png)
+![Cấu hình Custom Error Page]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-error-pages.png" >}})

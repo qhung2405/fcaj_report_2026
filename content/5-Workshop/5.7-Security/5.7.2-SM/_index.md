@@ -21,7 +21,7 @@ pre : " <b> 5.7.2 </b> "
 
 -  Database: MonaPefume-DB
 
-![SM](/images/5-Workshop/5.7-Security/5.7.2-SM/sm1.png)
+![SM]({{< relURL "images/5-Workshop/5.7-Security/5.7.2-SM/sm1.png" >}})
 
 2. **Configure secret**
 
@@ -31,12 +31,12 @@ pre : " <b> 5.7.2 </b> "
 | ------------------------------ | ------------------------------ |
 | Secret name | MonaPerfume-SM           |
 
-![SM](/images/5-Workshop/5.7-Security/5.7.2-SM/sm2.png)
+![SM]({{< relURL "images/5-Workshop/5.7-Security/5.7.2-SM/sm2.png" >}})
 
 3. **Review**
 
 Attach sample code into your backend to get secret and access to RDS
 
-![SM](/images/5-Workshop/5.7-Security/5.7.2-SM/sm3.png)
+![SM]({{< relURL "images/5-Workshop/5.7-Security/5.7.2-SM/sm3.png" >}})
 
 4. **Store**

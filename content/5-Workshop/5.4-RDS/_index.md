@@ -14,7 +14,7 @@ Go to the AWS Console, open the **Amazon RDS** service, and go to the **Database
 
 On the main RDS page, choose **Create database** to start the configuration.
 
-![RDS Create Database](/images/5-Workshop/5.4-RDS/rds-1.png)
+![RDS Create Database]({{< relURL "images/5-Workshop/5.4-RDS/rds-1.png" >}})
 
 At this step, if you want the full setup, choose the **Create database** option with **full configuration** to access the full settings page.
 
@@ -24,7 +24,7 @@ At the engine selection step, choose **PostgreSQL**.
 
 If AWS shows the **Easy create** option, you can enable it to use a quick setup. Easy create will use default settings while still ensuring the engine is PostgreSQL.
 
-![Choose PostgreSQL and Easy create](/images/5-Workshop/5.4-RDS/rds-2.png)
+![Choose PostgreSQL and Easy create]({{< relURL "images/5-Workshop/5.4-RDS/rds-2.png" >}})
 
 ### 3. Enter database name and choose self-managed password + master username
 
@@ -37,7 +37,7 @@ Enter:
 - **Master username**: the admin user name (for example: `admin`)
 - **Password** and **Confirm password**: the password you choose
 
-![Enter database name and self-manage password](/images/5-Workshop/5.4-RDS/rds-3.png)
+![Enter database name and self-manage password]({{< relURL "images/5-Workshop/5.4-RDS/rds-3.png" >}})
 
 ### 4. Choose connect to an existing EC2 and click Create database
 
@@ -47,6 +47,6 @@ Make sure the security group and network settings allow EC2 to connect to RDS.
 
 Finally, review the settings and click **Create database** to launch the PostgreSQL RDS instance.
 
-![Connect EC2 and Create database](/images/5-Workshop/5.4-RDS/rds-4.png)
+![Connect EC2 and Create database]({{< relURL "images/5-Workshop/5.4-RDS/rds-4.png" >}})
 
 After completion, RDS will start creating the PostgreSQL instance. You can use the provided endpoint to connect from EC2.

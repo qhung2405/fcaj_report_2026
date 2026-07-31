@@ -21,17 +21,17 @@ In this section, we will create an Auto Scaling Group and an Application Load Ba
 | Launch template name - require | `MonaPerfume-EC2-LT`           |
 | Template version description   | `Template for MonaPerfume EC2` |
 
-![Setting launch template](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt1.png)
+![Setting launch template]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt1.png" >}})
 
 - Select the AMI you previously created.
-  ![Setting launch template](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt2.png)
+  ![Setting launch template]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt2.png" >}})
 
 | Field                         | Value                        |
 | ------------------------------ | ------------------------------ |
 | Instance type | `t3.micro`           |
 | Key pair name   | Select the previously created key pair |
 
-  ![Setting launch template](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt2.5.png)
+  ![Setting launch template]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt2.5.png" >}})
 
 - **Network settings**
 
@@ -42,14 +42,14 @@ In this section, we will create an Auto Scaling Group and an Application Load Ba
 | Firewall (security groups) | Select existing security group   |
 | Security groups            | MonaPerfume-EC2-SG               |
 
-![Setting launch template](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt3.png)
+![Setting launch template]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt3.png" >}})
 
 - **Advanced details**
   | Field | Value|
   | ---------- | -------- |
   | IAM instance profile | MonaPerfume-EC2-S3-SSM |
 
-![Setting launch template](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt4.png)
+![Setting launch template]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt4.png" >}})
 
 2. **Create launch template**
 
@@ -69,7 +69,7 @@ In this section, we will create an Auto Scaling Group and an Application Load Ba
 | **IP address type**   | IPv4             |
 | **VPC**               | MonaPerfume-VPC  |
 
-![Setting target group](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg1.png)
+![Setting target group]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg1.png" >}})
 
 - Health checks
   | Field | Value |
@@ -77,7 +77,7 @@ In this section, we will create an Auto Scaling Group and an Application Load Ba
   | Health check protocol | HTTP |
   | Health check path | / (If a specific health check route exists in the backend, specify it here; otherwise, keep the default) |
 
-![Setting target group](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg2.png)
+![Setting target group]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg2.png" >}})
 
 - Advanced health check settings
   | Field | Value |
@@ -92,8 +92,8 @@ Choose 2 instance created earlier with port **3000** then **Includes as pending 
 
  **Next** -> **Create target group**
 
-![Setting target group](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg3.png)
-![Setting target group](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg4.png)
+![Setting target group]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg3.png" >}})
+![Setting target group]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg4.png" >}})
 
 ## Create Auto Scaling Group
 
@@ -104,7 +104,7 @@ Choose 2 instance created earlier with port **3000** then **Includes as pending 
 | Auto Scaling group name | `MonaPerfume-ASG`  |
 | Launch template         | MonaPerfume-EC2-LT |
 
-![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg1.png)
+![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg1.png" >}})
 
 - **Choose instance launch options**
 
@@ -113,7 +113,7 @@ Choose 2 instance created earlier with port **3000** then **Includes as pending 
 | VPC                            | `MonaPerfume-VPC`                                                                      |
 | Availability Zones and subnets | MonaPerfume-VPC-subnet-private1-us-east-1a, MonaPerfume-VPC-subnet-private2-us-east-1b |
 
-![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg2.png)
+![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg2.png" >}})
 
 - **Configure group size and scaling - optional**
 
@@ -123,7 +123,7 @@ Choose 2 instance created earlier with port **3000** then **Includes as pending 
 | Min desired capacity | `2`     |
 | Max desired capacity | `4`     |
 
-![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg3.png)
+![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg3.png" >}})
 
 - **Add tags - optional**
 
@@ -133,7 +133,7 @@ Choose 2 instance created earlier with port **3000** then **Includes as pending 
 | Key              | `Name`        |
 | Value - optional | `Scaling EC2` |
 
-![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg4.png)
+![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg4.png" >}})
 
 - **Create Auto Scaling Group**
 
@@ -143,14 +143,14 @@ Choose 2 instance created earlier with port **3000** then **Includes as pending 
 **EC2 -> Load balancers -> Create load balancer**
 
 1. Choose Application Load Balancer
-   ![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb1.png)
+   ![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb1.png" >}})
 
 2. **Basic configuration**
 | Field           | Value       |
 | ---------------- | ------------- |
 | Load blancer name              | `MonaPerfume-ALB`        |
 
-   ![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb2.png)
+   ![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb2.png" >}})
 
 3. **Network mapping**
 | Field           | Value       |
@@ -158,14 +158,14 @@ Choose 2 instance created earlier with port **3000** then **Includes as pending 
 | VPC              | `MonaPerfume-VPC`        |
 | Availability Zones and subnets              | chọn tất cả public subnet        |
 
-   ![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb3.png)
+   ![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb3.png" >}})
 
 4. **Security groups**
 | Field           | Value       |
 | ---------------- | ------------- |
 | Security groups              | `MonaPerfume-ALB-SG`        |
   
-   ![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb4.png)
+   ![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb4.png" >}})
 
 5. **Listener**
 | Field           | Value       |
@@ -175,4 +175,4 @@ Choose 2 instance created earlier with port **3000** then **Includes as pending 
 | Routing action              | `Forward to target group`        |
 | Target group              | `MonaPerfume-TG`        |
 
-   ![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb6.png)
+   ![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb6.png" >}})

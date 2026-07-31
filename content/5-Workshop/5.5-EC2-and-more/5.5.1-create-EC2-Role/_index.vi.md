@@ -47,7 +47,7 @@ Search `AmazonS3FullAccess`(ở phần này ta sẽ chọn full access cho dễ 
    - Chọn **Amazon Linux 2023 kernel-6.18 AMI**
    - Architecture: **64-bit (x86)**
 
-![Chọn AMAZON LINUX AMI](/images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-1.png)
+![Chọn AMAZON LINUX AMI]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-1.png" >}})
 
 4. **Instance type**:
    - Chọn **t3.micro** (Free Tier eligible)
@@ -68,17 +68,17 @@ Search `AmazonS3FullAccess`(ở phần này ta sẽ chọn full access cho dễ 
 7. **Configure storage**:
    - **Root volume**: 8 GiB, gp3
 
-![Setting network](/images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-2.png)
+![Setting network]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-2.png" >}})
 
 8. **Advanced details**
     - **IAM instance profile**: MonaPerfume-EC2-S3-SSM
 
 9. Nhấn **Launch instance**
 
-![Setting network](/images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-3.png)
+![Setting network]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-3.png" >}})
 
 **Launch thành công**
-![Setting network](/images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-4.png)
+![Setting network]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-4.png" >}})
 
 
 ### Tạo EC2 còn lại bằng AMI hoặc thủ công
@@ -94,11 +94,11 @@ Search `AmazonS3FullAccess`(ở phần này ta sẽ chọn full access cho dễ 
 
 1. Chọn instance bạn muốn tạo AMI từ -> **Actions** -> **Images and templates** -> **Create Images**
 
-![Setting ami](/images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ami1.png)
+![Setting ami]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ami1.png" >}})
 
 2. - **Image name**: `MonaPerfume-EC2-AMI`
    - Click không chọn **Reboot instance**
 
-![Setting ami](/images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ami2.png)
+![Setting ami]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ami2.png" >}})
 
 3. **Create image**

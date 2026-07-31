@@ -18,7 +18,7 @@ AWS has updated the CloudFront creation workflow to a step-by-step wizard. Below
 2. Click **Create distribution**.
 3. On the **Choose a plan** screen, select the **Free ($0/month)** tier:
 
-![CloudFront Free Tier Selection](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-choose-plan.png)
+![CloudFront Free Tier Selection]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-choose-plan.png" >}})
 
 4. Click **Next** to proceed.
 
@@ -29,7 +29,7 @@ AWS has updated the CloudFront creation workflow to a step-by-step wizard. Below
 1. Review general details of the Distribution.
 2. Enter a description name for the Distribution (or keep the default name suggested by AWS).
 
-![Distribution Name Configuration](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-name.png)
+![Distribution Name Configuration]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-name.png" >}})
 
 3. Click **Next** to proceed to the next step.
 
@@ -46,7 +46,7 @@ AWS has updated the CloudFront creation workflow to a step-by-step wizard. Below
    - Origin settings: Select **Use recommended origin settings**.
    - Cache settings: Select **Use recommended cache settings tailored to serving S3 content**.
 
-![Specify Origin Domain and OAC](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-specify-origin.png)
+![Specify Origin Domain and OAC]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-specify-origin.png" >}})
 
 5. Click **Next**.
 
@@ -57,7 +57,7 @@ AWS has updated the CloudFront creation workflow to a step-by-step wizard. Below
 1. Review security settings (WAF / DDoS protections are integrated into the Free plan).
 2. Retain default settings and click **Next**.
 
-![Security Configuration](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-security.png)
+![Security Configuration]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-security.png" >}})
 
 ---
 
@@ -66,7 +66,7 @@ AWS has updated the CloudFront creation workflow to a step-by-step wizard. Below
 1. Review all configuration settings from Step 1 through Step 5.
 2. Scroll to the bottom of the page and click **Create distribution**.
 
-![Review Configuration and Create Distribution](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-review-create.png)
+![Review Configuration and Create Distribution]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-review-create.png" >}})
 
 ---
 
@@ -76,7 +76,7 @@ AWS has updated the CloudFront creation workflow to a step-by-step wizard. Below
 2. Scroll down to the Default root object section, enter **index.html**.
 3. Click **Save changes**.
 
-![Add Root File](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-edit-setting.png)
+![Add Root File]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-edit-setting.png" >}})
 
 ---
 
@@ -90,4 +90,4 @@ AWS has updated the CloudFront creation workflow to a step-by-step wizard. Below
    - **HTTP response code**: `200: OK`
 3. Click **Create custom error response**.
 
-![Configure Custom Error Page](/images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-error-pages.png)
+![Configure Custom Error Page]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.2-cloudfront-error-pages.png" >}})

@@ -10,7 +10,7 @@ Security Groups act as virtual firewalls at the instance level to control inboun
 
 ---
 
-![Security Group diagram](/images/5-Workshop/5.3-vpc/5.3.2-creat-sg/ssg4.png)
+![Security Group diagram]({{< relURL "images/5-Workshop/5.3-vpc/5.3.2-creat-sg/ssg4.png" >}})
 
 #### Security Group cho ALB
 

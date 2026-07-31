@@ -22,13 +22,13 @@ In this step, we will create an **Amazon S3 Bucket** to serve as the origin stor
 | **AWS Region** | `us-east-1` (US East - N. Virginia) | Choose the same region as your workshop resources |
 | **Object Ownership** | `ACLs disabled (recommended)` | Recommended by AWS for easier permission management |
 
-![Create S3 Bucket - General Settings](/images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-create-1.png)
+![Create S3 Bucket - General Settings]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-create-1.png" >}})
 
 4. **Block Public Access settings for this bucket**:
    - Check **Block *all* public access**.
    - *Rationale*: We strictly adhere to AWS Security Best Practices. The S3 bucket should not be exposed to the public internet directly; access is granted exclusively through CloudFront CDN using Origin Access Control (OAC).
 
-![Block All Public Access](/images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-block-public.png)
+![Block All Public Access]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-block-public.png" >}})
 
 5. Leave default settings for **Bucket Versioning** and **Default encryption** (SSE-S3).
 6. Scroll down and click **Create bucket**.
@@ -43,7 +43,7 @@ Once the bucket is successfully created:
 2. In the **Objects** tab, click **Upload**.
 3. Drag and drop the contents of your compiled **Perfume** project (including `index.html`, `assets/`, `css/`, `js/`, and image files).
 
-![Upload Frontend Code to S3](/images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-upload.png)
+![Upload Frontend Code to S3]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-upload.png" >}})
 
 4. Alternatively, use the **AWS CLI** to synchronize your build files:
 
@@ -54,4 +54,4 @@ aws s3 sync ./perfume/dist s3://monaperfume-frontend-bucket-2026/ --delete
 
 5. Verify that `index.html` resides at the root level of the S3 Bucket.
 
-![Objects list in S3 Bucket](/images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-objects-list.png)
+![Objects list in S3 Bucket]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.1-s3-objects-list.png" >}})

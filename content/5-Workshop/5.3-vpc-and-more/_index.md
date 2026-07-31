@@ -12,11 +12,11 @@ In this section, we will set up the VPC alongside its associated resources and f
 
 ## VPC Architecture Diagram
 
-![Kiến trúc VPC](/images/5-Workshop/5.3-vpc/vpc_archi3.png)
+![Kiến trúc VPC]({{< relURL "images/5-Workshop/5.3-vpc/vpc_archi3.png" >}})
 
 ## Security Group Architecture Diagram
 
-![Security Group diagram](/images/5-Workshop/5.3-vpc/5.3.2-creat-sg/ssg4.png)
+![Security Group diagram]({{< relURL "images/5-Workshop/5.3-vpc/5.3.2-creat-sg/ssg4.png" >}})
 
 #### Nội dung
 

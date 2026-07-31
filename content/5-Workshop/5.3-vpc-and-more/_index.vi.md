@@ -12,11 +12,11 @@ Trong phần này ta sẽ thiết lập VPC và các tài nguyên/ tính năng c
 
 ## Sơ đồ kiến trúc VPC
 
-![Kiến trúc VPC](/images/5-Workshop/5.3-vpc/vpc_archi4.png)
+![Kiến trúc VPC]({{< relURL "images/5-Workshop/5.3-vpc/vpc_archi4.png" >}})
 
 ## Sơ đồ kiến trúc Security Group
 
-![Security Group diagram](/images/5-Workshop/5.3-vpc/5.3.2-creat-sg/ssg4.png)
+![Security Group diagram]({{< relURL "images/5-Workshop/5.3-vpc/5.3.2-creat-sg/ssg4.png" >}})
 
 #### Nội dung
 

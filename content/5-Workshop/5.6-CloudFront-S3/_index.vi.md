@@ -12,7 +12,7 @@ Trong phần này, chúng ta sẽ thiết lập hạ tầng phân phối nội d
 
 Kiến trúc này giúp tối ưu hóa hiệu năng tải trang, giảm độ trễ (latency) nhờ mạng lưới Edge Locations toàn cầu của CloudFront, đồng thời bảo mật tuyệt đối cho dữ liệu trên S3 Bucket thông qua cơ chế **Origin Access Control (OAC)**.
 
-![Kiến trúc S3 và CloudFront](/images/5-Workshop/5.6-CloudFront-S3/architecture-overview.png)
+![Kiến trúc S3 và CloudFront]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/architecture-overview.png" >}})
 
 #### Lợi ích của mô hình CloudFront + S3:
 

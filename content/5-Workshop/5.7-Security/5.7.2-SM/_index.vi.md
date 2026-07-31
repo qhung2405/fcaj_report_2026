@@ -23,7 +23,7 @@ Ta sẽ tạo Secret để gắn vào database
 
 -  Database: MonaPefume-DB
 
-![SM](/images/5-Workshop/5.7-Security/5.7.2-SM/sm1.png)
+![SM]({{< relURL "images/5-Workshop/5.7-Security/5.7.2-SM/sm1.png" >}})
 
 2. **Configure secret**
 
@@ -33,12 +33,12 @@ Ta sẽ tạo Secret để gắn vào database
 | ------------------------------ | ------------------------------ |
 | Secret name | MonaPerfume-SM           |
 
-![SM](/images/5-Workshop/5.7-Security/5.7.2-SM/sm2.png)
+![SM]({{< relURL "images/5-Workshop/5.7-Security/5.7.2-SM/sm2.png" >}})
 
 3. **Review**
 
 Gắn phần sample code vào mã nguuồn backend để lấy secret và truy cập vào RDS
 
-![SM](/images/5-Workshop/5.7-Security/5.7.2-SM/sm3.png)
+![SM]({{< relURL "images/5-Workshop/5.7-Security/5.7.2-SM/sm3.png" >}})
 
 4. **Store**

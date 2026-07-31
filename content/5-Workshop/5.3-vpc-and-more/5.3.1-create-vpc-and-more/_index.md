@@ -32,10 +32,10 @@ VPC configuration:
 | **NAT gateways ($) - updated**              | Regional - new     |
 | **VPC endpoints**                           | S3 Gateway         |
 
-![vpc diagram](/images/5-Workshop/5.3-vpc/5.3.1-create-vpc-and-more/vpc7.png)
+![vpc diagram]({{< relURL "images/5-Workshop/5.3-vpc/5.3.1-create-vpc-and-more/vpc7.png" >}})
 
-![vpc diagram](/images/5-Workshop/5.3-vpc/5.3.1-create-vpc-and-more/vpc8.png)
+![vpc diagram]({{< relURL "images/5-Workshop/5.3-vpc/5.3.1-create-vpc-and-more/vpc8.png" >}})
 
-![vpc diagram](/images/5-Workshop/5.3-vpc/5.3.1-create-vpc-and-more/vpc9.png)
+![vpc diagram]({{< relURL "images/5-Workshop/5.3-vpc/5.3.1-create-vpc-and-more/vpc9.png" >}})
 
 2. Choose **Create VPC**

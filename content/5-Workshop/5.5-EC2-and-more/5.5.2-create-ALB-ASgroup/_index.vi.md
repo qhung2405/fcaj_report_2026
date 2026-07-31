@@ -22,17 +22,17 @@ Trong phần này, ta sẽ tạo Auto Scaling Group và Application Balancer
 | Launch template name - require | `MonaPerfume-EC2-LT`           |
 | Template version description   | `Template for MonaPerfume EC2` |
 
-![Setting launch template](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt1.png)
+![Setting launch template]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt1.png" >}})
 
 - Chọn AMI bạn đã tạo
-  ![Setting launch template](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt2.png)
+  ![Setting launch template]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt2.png" >}})
 
 | Trường                         | Giá trị                        |
 | ------------------------------ | ------------------------------ |
 | Instance type | `t3.micro`           |
 | Key pair name   | chọn keypair đã tạo |
 
-  ![Setting launch template](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt2.5.png)
+  ![Setting launch template]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt2.5.png" >}})
 
 - **Network settings**
 
@@ -43,14 +43,14 @@ Trong phần này, ta sẽ tạo Auto Scaling Group và Application Balancer
 | Firewall (security groups) | Select existing security group   |
 | Security groups            | MonaPerfume-EC2-SG               |
 
-![Setting launch template](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt3.png)
+![Setting launch template]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt3.png" >}})
 
 - **Advanced details**
   | Trường | Giá trị|
   | ---------- | -------- |
   | IAM instance profile | MonaPerfume-EC2-S3-SSM |
 
-![Setting launch template](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt4.png)
+![Setting launch template]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/lt4.png" >}})
 
 2. **Create launch template**
 
@@ -70,7 +70,7 @@ Trong phần này, ta sẽ tạo Auto Scaling Group và Application Balancer
 | **IP address type**   | IPv4             |
 | **VPC**               | MonaPerfume-VPC  |
 
-![Setting target group](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg1.png)
+![Setting target group]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg1.png" >}})
 
 - Health checks
   | Trường | Giá trị |
@@ -78,7 +78,7 @@ Trong phần này, ta sẽ tạo Auto Scaling Group và Application Balancer
   | Health check protocol | HTTP |
   | Health check path | / (nếu trong backend có mục healthcheck thì thay vào, không thì giữ nguyên) |
 
-![Setting target group](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg2.png)
+![Setting target group]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg2.png" >}})
 
 - Advanced health check settings
   | Trường | Giá trị |
@@ -93,8 +93,8 @@ Click chọn 2 instance ta đã tạo với port **3000** và **Includes as pend
 
 Nhấn **Next** và **Create target group**
 
-![Setting target group](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg3.png)
-![Setting target group](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg4.png)
+![Setting target group]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg3.png" >}})
+![Setting target group]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/tg4.png" >}})
 
 ## Tạo Auto Scaling Group
 
@@ -105,7 +105,7 @@ Nhấn **Next** và **Create target group**
 | Auto Scaling group name | `MonaPerfume-ASG`  |
 | Launch template         | MonaPerfume-EC2-LT |
 
-![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg1.png)
+![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg1.png" >}})
 
 - **Choose instance launch options**
 
@@ -114,7 +114,7 @@ Nhấn **Next** và **Create target group**
 | VPC                            | `MonaPerfume-VPC`                                                                      |
 | Availability Zones and subnets | MonaPerfume-VPC-subnet-private1-us-east-1a, MonaPerfume-VPC-subnet-private2-us-east-1b |
 
-![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg2.png)
+![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg2.png" >}})
 
 - **Configure group size and scaling - optional**
 
@@ -124,7 +124,7 @@ Nhấn **Next** và **Create target group**
 | Min desired capacity | `2`     |
 | Max desired capacity | `4`     |
 
-![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg3.png)
+![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg3.png" >}})
 
 - **Add tags - optional**
 
@@ -134,7 +134,7 @@ Nhấn **Next** và **Create target group**
 | Key              | `Name`        |
 | Value - optional | `Scaling EC2` |
 
-![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg4.png)
+![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/asg4.png" >}})
 
 - **Create Auto Scaling Group**
 
@@ -143,14 +143,14 @@ Nhấn **Next** và **Create target group**
 **EC2 -> Load balancers -> Create load balancer**
 
 1. Chọn Application Load Balancer
-   ![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb1.png)
+   ![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb1.png" >}})
 
 2. **Basic configuration**
 | Trường           | Giá trị       |
 | ---------------- | ------------- |
 | Load blancer name              | `MonaPerfume-ALB`        |
 
-   ![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb2.png)
+   ![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb2.png" >}})
 
 3. **Network mapping**
 | Trường           | Giá trị       |
@@ -158,14 +158,14 @@ Nhấn **Next** và **Create target group**
 | VPC              | `MonaPerfume-VPC`        |
 | Availability Zones and subnets              | chọn tất cả public subnet        |
 
-   ![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb3.png)
+   ![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb3.png" >}})
 
 4. **Security groups**
 | Trường           | Giá trị       |
 | ---------------- | ------------- |
 | Security groups              | `MonaPerfume-ALB-SG`        |
   
-   ![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb4.png)
+   ![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb4.png" >}})
 
 5. **Listener**
 | Trường           | Giá trị       |
@@ -175,4 +175,4 @@ Nhấn **Next** và **Create target group**
 | Routing action              | `Forward to target group`        |
 | Target group              | `MonaPerfume-TG`        |
 
-   ![Setting alb](/images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb6.png)
+   ![Setting alb]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.2-create-ALB-ASgroup/alb6.png" >}})

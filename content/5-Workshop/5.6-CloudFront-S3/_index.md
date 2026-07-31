@@ -12,7 +12,7 @@ In this section, we will establish a static content delivery infrastructure for 
 
 This architecture optimizes page loading speed and reduces latency through CloudFront's global network of Edge Locations, while ensuring absolute security for data stored in the S3 Bucket via **Origin Access Control (OAC)**.
 
-![S3 and CloudFront Architecture](/images/5-Workshop/5.6-CloudFront-S3/architecture-overview.png)
+![S3 and CloudFront Architecture]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/architecture-overview.png" >}})
 
 #### Benefits of CloudFront + S3:
 

@@ -20,7 +20,7 @@ Trong bước này, chúng ta sẽ áp dụng **S3 Bucket Policy** cho phép duy
 
 2. Chọn nút **Copy policy** ngay bên cạnh.
 
-![Copy Policy từ CloudFront Console](/images/5-Workshop/5.6-CloudFront-S3/5.6.3-copy-policy-banner.png)
+![Copy Policy từ CloudFront Console]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.3-copy-policy-banner.png" >}})
 
 ---
 
@@ -31,7 +31,7 @@ Trong bước này, chúng ta sẽ áp dụng **S3 Bucket Policy** cho phép duy
 3. Chuyển sang tab **Permissions**.
 4. Cuộn xuống mục **Bucket policy**, chọn nút **Edit**.
 
-![S3 Edit Bucket Policy](/images/5-Workshop/5.6-CloudFront-S3/5.6.3-s3-edit-policy.png)
+![S3 Edit Bucket Policy]({{< relURL "images/5-Workshop/5.6-CloudFront-S3/5.6.3-s3-edit-policy.png" >}})
 
 5. Dán đoạn JSON Policy đã copy ở Bước 1 vào ô chỉnh sửa. Cấu trúc chuẩn của S3 Bucket Policy với OAC như sau:
 
