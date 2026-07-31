@@ -6,7 +6,6 @@ chapter : false
 pre : " <b> 5.5. </b> "
 ---
 
-# Setup Backend Server on EC2
 
 In this section, we will deploy the compute infrastructure for the Perfume Store Backend application inside the VPC Private Subnet, including creating IAM Roles, launching EC2 instances, setting up an Application Load Balancer (ALB), and deploying the Node.js/Express application.
 

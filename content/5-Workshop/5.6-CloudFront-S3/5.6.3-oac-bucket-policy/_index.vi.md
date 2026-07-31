@@ -57,8 +57,7 @@ Trong bước này, chúng ta sẽ áp dụng **S3 Bucket Policy** cho phép duy
 }
 ```
 
-{{% notice info %}}
-💡 **Lưu ý:**
+
 - Thay thế `monaperfume-frontend-bucket-2026` bằng đúng tên S3 Bucket của bạn.
 - Thay thế `ACCOUNT_ID` bằng ID tài khoản AWS của bạn.
 - Thay thế `DISTRIBUTION_ID` bằng ID của CloudFront Distribution vừa tạo (ví dụ: `E1A2B3C4D5E6F7`).

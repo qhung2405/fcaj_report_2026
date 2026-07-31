@@ -6,7 +6,6 @@ chapter : false
 pre : " <b> 5.5. </b> "
 ---
 
-# Thiết lập máy chủ backend trên EC2
 
 Trong phần này, chúng ta sẽ thực hiện triển khai hạ tầng tính toán cho ứng dụng Backend cửa hàng nước hoa (Perfume Store) nằm trong Private Subnet của VPC, bao gồm việc tạo IAM Role phân quyền, khởi tạo EC2 Instances, thiết lập Application Load Balancer (ALB) và tiến hành deploy ứng dụng Node.js/Express.
 
