@@ -1,29 +1,28 @@
 ---
 title: "Worklog Tuần 7"
-date: 2026-07-27
+date: 2026-07-13
 weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
-
 ### Mục tiêu tuần 7:
 
-* Mở rộng ứng dụng với nhóm dịch vụ AWS khuyến nghị: AWS Lambda, API Gateway và Amazon Cognito.
-* Bổ sung xác thực/phân quyền người dùng cho ứng dụng bằng Amazon Cognito.
+* Hiểu tư duy Đóng gói ứng dụng (Containerization) với Docker trong phát triển phần mềm.
+* Thành thạo cách đẩy và quản lý Docker Image trên kho lưu trữ AWS ECR (Elastic Container Registry).
+* Triển khai ứng dụng Web từ Container lên AWS bằng dịch vụ AWS App Runner đơn giản, tự động.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | --- | --- | --- | --- |
-| 2 | - Tìm hiểu khái niệm AWS Lambda và API Gateway. | 27/07/2026 | 27/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Viết và deploy Lambda function cho, expose qua API Gateway. | 28/07/2026 | 28/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Kiểm tra endpoint mới từ ứng dụng/frontend. | 29/07/2026 | 29/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Tìm hiểu khái niệm Amazon Cognito và thiết lập Cognito User Pool cho đăng ký/đăng nhập người dùng. | 30/07/2026 | 30/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - Tích hợp xác thực Cognito vào ứng dụng (đăng nhập, kiểm tra token). | 31/07/2026 | 31/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| --- | ----------| ------------ | --------------- | -------------- |
+| 2   | - Tìm hiểu khái niệm Containerization & So sánh Docker với Virtual Machine (EC2) <br> - Viết `Dockerfile` đơn giản để đóng gói một ứng dụng Web (Node.js/Python/React) | 13/07/2026   | 13/07/2026      |
+| 3   | - Tìm hiểu dịch vụ AWS ECR (Kho chứa Docker Image) <br> - **Thực hành:** Tạo Repository trên ECR, dùng AWS CLI đăng nhập và push Docker Image lên ECR | 14/07/2026 | 14/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4, 5 | - Tìm hiểu dịch vụ AWS App Runner (Dịch vụ chạy Container tự động dành cho Software Developer không cần quản lý hạ tầng) <br> - **Thực hành:** Cấu hình App Runner pull image từ ECR và tự động Deploy ứng dụng Web ra internet | 15/07/2026 | 16/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6, 7 | - **Thực hành:** Kiểm thử kết nối Public URL của App Runner, cấu hình biến môi trường (Environment Variables) cho Container | 17/07/2026 | 18/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 7:
 
-* Triển khai và deploy thành công Lambda function cho, kết nối qua API Gateway và gọi được từ ứng dụng.
-* Thiết lập Amazon Cognito cho xác thực người dùng, cho phép người dùng đăng ký, đăng nhập và truy cập các phần được bảo vệ của ứng dụng.
-* Xác nhận nhóm dịch vụ khuyến nghị (Lambda, API Gateway, Cognito) tích hợp đúng với kiến trúc EC2/RDS/DynamoDB/S3 đã có.
+* Đóng gói thành công ứng dụng phần mềm thành Docker Image chuẩn.
+* Lưu trữ và quản lý các phiên bản Container Image an toàn trên AWS ECR.
+* Triển khai hoàn chỉnh một trang Web Containerized lên môi trường Cloud với AWS App Runner.

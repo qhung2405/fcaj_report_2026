@@ -69,4 +69,4 @@ Một đội đã xây dựng một sản phẩm khá thú vị: trợ lý AI d�
 Tham gia **AI Agentic Build Week** giúp em thấy rõ cách các đội khác nhau cùng giải quyết một chủ đề lớn — AI-agentic trên AWS — nhưng theo những hướng sản phẩm rất khác nhau: từ an toàn đám đông, tình báo doanh nghiệp, đến công cụ hỗ trợ Solution Architect. Được nghe cả hành trình chứ không chỉ xem phần demo hoàn chỉnh giúp em cảm nhận rõ hơn nhiều những đánh đổi và công sức đằng sau mỗi sản phẩm, hơn là chỉ đọc mô tả.
 
 #### Một số hình ảnh khi tham gia sự kiện
-*Thêm hình ảnh của bạn tại đây*
+![Sự kiện AI Agentic Build Week]({{< relURL "images/event1.jpg" >}})

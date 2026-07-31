@@ -3,3 +3,16 @@ public/
 resources/
 .hugo_build.lock
 .DS_Store
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+
+# Python venv
+.venv/
+__pycache__/
+*.pyc
+
+# Editor
+.vscode/

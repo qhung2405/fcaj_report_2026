@@ -1,30 +1,28 @@
 ---
 title: "Worklog Tuần 8"
-date: 2026-08-03
+date: 2026-07-20
 weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
-
 ### Mục tiêu tuần 8:
 
-* Kiểm thử toàn bộ ứng dụng đầu-cuối và sửa các lỗi còn lại.
-* Nếu còn thời gian, tìm hiểu thêm một dịch vụ tùy chọn (Auto Scaling, CloudFront hoặc CodePipeline).
-* Rà soát chi phí, dọn dẹp tài nguyên không dùng đến, và hoàn thiện báo cáo cuối kỳ (Proposal, Workshop, Self-Assessment).
+* Quản lý thông tin cấu hình nhạy cảm (API Keys, DB Credentials) an toàn bằng AWS Systems Manager Parameter Store.
+* Nắm tư duy và luồng hoạt động của tích hợp/triển khai tự động (CI/CD).
+* Tự động hóa quá trình Deploy code/máy chủ khi có thay đổi trên Repository (GitHub Actions / AWS CodePipeline).
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | --- | --- | --- | --- |
-| 2 | - Kiểm thử chức năng đầu-cuối của ứng dụng. | 03/08/2026 | 03/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Sửa các lỗi phát hiện trong quá trình kiểm thử. | 04/08/2026 | 04/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Rà soát hiệu năng ứng dụng và cấu hình bảo mật cơ bản. | 05/08/2026 | 05/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Tìm hiểu một dịch vụ tùy chọn (Auto Scaling / CloudFront / CodePipeline). | 06/08/2026 | 06/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - Cấu hình và kiểm tra dịch vụ tùy chọn đã chọn. | 07/08/2026 | 07/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| --- | ----------| ------------ | --------------- | -------------- |
+| 2   | - Tìm hiểu rủi ro khi hardcode bí mật (Secrets/API Keys) trong nguồn mã nguồn <br> - Tìm hiểu dịch vụ AWS Systems Manager (SSM) Parameter Store | 20/07/2026   | 20/07/2026      |
+| 3   | - **Thực hành:** Lưu trữ tham số (SecureString) trên Parameter Store và truy xuất trực tiếp từ ứng dụng/Lambda bằng SDK | 21/07/2026 | 21/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4, 5 | - Tìm hiểu tổng quan về CI/CD Pipeline trong dự án phần mềm <br> - **Thực hành:** Thiết lập Workflow đơn giản với GitHub Actions (hoặc AWS CodePipeline) để tự động kiểm thử và deploy mã nguồn lên S3 / App Runner mỗi khi `git push` | 22/07/2026 | 23/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6, 7 | - **Thực hành:** Thử nghiệm thay đổi code, kiểm tra quá trình tự động Build & Deploy, kiểm tra nhật ký lỗi (Build Logs) | 24/07/2026 | 25/08/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 8:
 
-* Hoàn tất kiểm thử đầu-cuối ứng dụng web; toàn bộ dịch vụ AWS cốt lõi (IAM, VPC, EC2, S3, RDS, DynamoDB, CloudWatch, AWS CLI) hoạt động đồng bộ và chính xác.
-* Rà soát chi phí AWS và xóa các tài nguyên không dùng đến để tránh phát sinh chi phí không cần thiết.
-* Hoàn thành báo cáo cuối kỳ, bao gồm Proposal, nội dung Workshop và Self-Assessment.
+* Tách biệt hoàn toàn thông tin bảo mật và cấu hình ra khỏi source code bằng SSM Parameter Store.
+* Hiểu sâu luồng chuyển giao phần mềm tự động trong thực tế (CI/CD).
+* Xây dựng thành công quy trình tự động cập nhật ứng dụng Cloud ngay khi lập trình viên đẩy code mới.

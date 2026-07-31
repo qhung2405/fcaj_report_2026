@@ -69,5 +69,4 @@ One team built a meta-product: an AI assistant for Solution Architects that read
 Attending **AI Agentic Build Week** gave me a close-up look at how different teams tackle the same broad theme — agentic AI on AWS — with very different products, from crowd safety to corporate intelligence to developer tooling. Seeing the full journey, not just the polished final demo, made the trade-offs and effort behind each product much more tangible than reading about them would have been.
 
 #### Event photos
-*Add your event photos here*
-
+![AI Agentic Build Week event]({{< relURL "images/event1.jpg" >}})

@@ -17,17 +17,17 @@ Ta cần tạo **IAM role** cho phép ta truy cập EC2 nằm trong private subn
 
 Chọn thông tin
 
-3.1 **Select trusted entity** 
+- **Select trusted entity** 
 | Trường       | Giá trị| 
 | ---------- | -------- | 
 | Trusted entity type      | AWS service      | 
 | Use case      | EC2      | 
 
-3.2 **Add permissions**
+- **Add permissions**
 
 Search `AmazonS3FullAccess`(ở phần này ta sẽ chọn full access cho dễ thao tác, sau khi deploy thành công ta sẽ đổi lại) và `AmazonSSMManagedInstanceCore` và tick chọn bên trái
 
-3.3 **Name, review, and create**
+- **Name, review, and create**
 | Trường       | Giá trị| 
 | ---------- | -------- | 
 | Role name      |  MonaPerfume-EC2-S3-SSM      | 
@@ -47,7 +47,7 @@ Search `AmazonS3FullAccess`(ở phần này ta sẽ chọn full access cho dễ 
    - Chọn **Amazon Linux 2023 kernel-6.18 AMI**
    - Architecture: **64-bit (x86)**
 
-![Chọn AMAZON LINUX AMI]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-1.png" >}})
+![Chọn AMAZON LINUX AMI](/images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-1.png)
 
 4. **Instance type**:
    - Chọn **t3.micro** (Free Tier eligible)
@@ -68,22 +68,37 @@ Search `AmazonS3FullAccess`(ở phần này ta sẽ chọn full access cho dễ 
 7. **Configure storage**:
    - **Root volume**: 8 GiB, gp3
 
-![Setting network]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-2.png" >}})
+![Setting network](/images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-2.png)
 
 8. **Advanced details**
     - **IAM instance profile**: MonaPerfume-EC2-S3-SSM
 
 9. Nhấn **Launch instance**
 
-![Setting network]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-3.png" >}})
+![Setting network](/images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-3.png)
 
 **Launch thành công**
-![Setting network]({{< relURL "images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-4.png" >}})
+![Setting network](/images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ec2-4.png)
 
 
-### Tạo EC2 còn lại
-- Ta có thể tạo con EC2 này bằng AMI của con EC2 đầu tiên sau khi hoàn thành các bước ở [Cài đặt môi trường và Deploy](/FCAJ-Workshop/vi/5-workshop/5.5-ec2-and-more/5.5.3-deploy/) hoặc làm tương tự các bước trên
-- Lặp lại các bước từ 1- 9 nhưng thay các thông tin sau: 
+### Tạo EC2 còn lại bằng AMI hoặc thủ công
+- Ta có thể tạo con EC2 này bằng AMI của con EC2 đầu tiên sau khi hoàn thành các bước ở [Cài đặt môi trường và Deploy](/FCAJ-Workshop/vi/5-workshop/5.5-ec2-and-more/5.5.3-deploy/) hoặc làm tương tự các bước trên và thay các thông tin sau:
 
-1.  **Name**: `MonaPerfume-EC2-PRIVATE-02`
-2. **Subnet**: MonaPerfume-VPC-subnet-private2-us-east-1b
+
+| Trường                    | Giá trị                        |
+| ------------------------- | ------------------------------ |
+| **Name**                   | `MonaPerfume-EC2-PRIVATE-02`               |
+| **Subnet**                | MonaPerfume-VPC-subnet-private2-us-east-1b     |
+
+- Nếu tạo bằng AMI:
+
+1. Chọn instance bạn muốn tạo AMI từ -> **Actions** -> **Images and templates** -> **Create Images**
+
+![Setting ami](/images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ami1.png)
+
+2. - **Image name**: `MonaPerfume-EC2-AMI`
+   - Click không chọn **Reboot instance**
+
+![Setting ami](/images/5-Workshop/5.5-EC2-and-more/5.5.1-create-EC2-Role/ami2.png)
+
+3. **Create image**

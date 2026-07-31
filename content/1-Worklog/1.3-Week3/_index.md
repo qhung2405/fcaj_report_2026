@@ -1,29 +1,29 @@
 ---
 title: "Week 3 Worklog"
-date: 2026-06-29
+date: 2026-06-15
 weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
-
 ### Week 3 Objectives:
 
-* Launch an EC2 instance inside the VPC created in Week 2 to host the web application.
-* Deploy the application code written locally in VSCode to the EC2 instance and verify it runs correctly.
+* Learn how to use S3 to store and host a Static Website.
+* Manage file versions using the S3 Versioning feature.
+* Set up automated rules to delete or archive old files (Lifecycle Rules).
 
-### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | --- | --- | --- | --- |
-| 2 | - Learn EC2 concepts (instance types, AMI, EBS, Elastic IP). | 06/29/2026 | 06/29/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Launch an EC2 instance in the public subnet, attach the web-tier Security Group. | 06/30/2026 | 06/30/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Connect via SSH and install the runtime environment (Python/Node.js) and reverse proxy (Nginx). | 07/01/2026 | 07/01/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Deploy application code from local VSCode to the EC2 instance (via Git or `scp`). | 07/02/2026 | 07/02/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - Test the running application by accessing the instance's public IP/domain. | 07/03/2026 | 07/03/2026 | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to Implement This Week:
+| Day | Tasks | Start Date | Completion Date | Reference Documentation |
+| --- | ----- | ---------- | --------------- | ----------------------- |
+| Mon | - Learn about the Static Website Hosting feature on Amazon S3 | 15/06/2026 | 15/06/2026 | |
+| Tue | - **Hands-on practice:** Upload a simple `index.html` file to S3 and enable Hosting to run the website on a browser | 16/06/2026 | 16/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Wed | - Learn about S3 Versioning (saving old versions when overwriting files) | 17/06/2026 | 17/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Thu | - **Hands-on practice:** Enable Versioning, edit the HTML file, and restore an older file version | 18/06/2026 | 18/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Fri | - Learn & practice creating Lifecycle Rules: Automatically transition old files to S3 Glacier or delete them after 30 days | 19/06/2026 | 19/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 3 Achievements:
 
-* Successfully launched and configured an EC2 instance running Amazon Linux/Ubuntu in the public subnet.
-* Installed the application runtime and reverse proxy, configured the instance to serve the application on port 80/443.
-* Deployed the application from the local VSCode environment to EC2 and confirmed it is accessible from a browser.
+* Successfully published a static HTML website hosted directly on S3.
+* Learned how to protect files against accidental overwrites/deletions using S3 Versioning.
+* Successfully configured automated data cleanup rules to help save storage costs.

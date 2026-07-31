@@ -1,29 +1,28 @@
 ---
 title: "Worklog Tuần 4"
-date: 2026-07-06
+date: 2026-06-22
 weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-
 ### Mục tiêu tuần 4:
 
-* Tạo và cấu hình S3 bucket để lưu trữ static assets và/hoặc file người dùng upload cho ứng dụng.
-* Tích hợp code ứng dụng với S3 bằng AWS SDK để có thể upload/lấy file trực tiếp từ ứng dụng.
+* Tìm hiểu tổng quan dịch vụ CSDL trên AWS (Relational vs Non-Relational).
+* Khởi tạo, cấu hình mạng và kết nối thành công tới Amazon RDS (MySQL/PostgreSQL).
+* Hiểu kiến trúc Multi-AZ giúp tối ưu tính sẵn sàng cao (High Availability).
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | --- | --- | --- | --- |
-| 2 | - Tìm hiểu khái niệm Amazon S3 (bucket, object, phân quyền). | 06/07/2026 | 06/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Tạo S3 bucket với cấu trúc tên và thư mục phù hợp. | 07/07/2026 | 07/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Cấu hình bucket policy/IAM policy để chỉ ứng dụng (qua IAM role) mới có quyền ghi vào bucket. | 08/07/2026 | 08/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Tích hợp AWS SDK (boto3/AWS SDK for JavaScript) vào ứng dụng để upload/download file. | 09/07/2026 | 09/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - Kiểm tra upload và lấy file thông qua ứng dụng. | 10/07/2026 | 10/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| --- | ----------| ------------ | --------------- | -------------- |
+| 2   | - Tổng quan về CSDL trên AWS: Amazon RDS, Aurora, DynamoDB <br> - So sánh Tự cài CSDL trên EC2 vs Sử dụng Amazon RDS | 22/06/2026   | 22/06/2026 |
+| 3, 4   | - Tìm hiểu Kiến trúc RDS: <br>&emsp; + DB Instance Engines (MySQL, PostgreSQL) <br>&emsp; + DB Subnet Groups & VPC Setup <br>&emsp; + Security Groups cho Database  | 23/06/2026 | 24/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Thực hành**: <br>&emsp; + Tạo DB Subnet Group trong VPC <br>&emsp; + Khởi tạo 1 RDS MySQL Instance | 25/06/2026 | 25/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Tìm hiểu khái niệm Multi-AZ Deployment (Synchronous replication, Failover) <br> - **Thực hành:** <br>&emsp; + Dùng DBeaver/MySQL Workbench kết nối vào RDS | 26/06/2026 | 26/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 4:
 
-* Tạo và cấu hình thành công S3 bucket để lưu static assets / file người dùng upload cho ứng dụng.
-* Áp dụng bucket policy và IAM permission theo nguyên tắc quyền hạn tối thiểu để app server truy cập S3 an toàn.
-* Tích hợp S3 vào code ứng dụng, kiểm tra chức năng upload/download hoạt động đầy đủ.
+* Biết khi nào nên dùng CSDL quan hệ (RDS) và phi quan hệ (DynamoDB).
+* Khởi tạo thành công Amazon RDS MySQL instance đạt chuẩn cấu hình mạng riêng tư trong VPC.
+* Hiểu nguyên lý hoạt động của Multi-AZ phục vụ cho bài toán khắc phục sự cố (Failover).

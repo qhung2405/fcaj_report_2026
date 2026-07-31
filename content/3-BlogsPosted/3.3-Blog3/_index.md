@@ -35,6 +35,10 @@ To solve this problem, AWS provides Amazon EventBridge — a serverless service 
 
 
 ![Blog 3]({{< relURL "images/image3.png" >}})
+
+<p style="font-size: 1rem; font-weight: normal;">
+  <a href="https://www.facebook.com/share/p/18qszRmJAL/">View post on AWS Study Group</a>
+</p>
 ---
 
 ### References

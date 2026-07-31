@@ -1,29 +1,28 @@
 ---
 title: "Week 7 Worklog"
-date: 2026-07-27
+date: 2026-07-13
 weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
-
 ### Week 7 Objectives:
 
-* Extend the application with recommended-tier AWS services: AWS Lambda, API Gateway and Amazon Cognito.
-* Add user authentication/authorization to the application using Amazon Cognito.
+* Understand the Containerization mindset with Docker in software development.
+* Master pushing and managing Docker Images on AWS ECR (Elastic Container Registry).
+* Deploy a containerized web application to AWS simply and automatically using AWS App Runner.
 
-### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | --- | --- | --- | --- |
-| 2 | - Learn AWS Lambda and API Gateway concepts. | 07/27/2026 | 07/27/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Write and deploy a Lambda function, expose it via API Gateway. | 07/28/2026 | 07/28/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Test the new endpoint from the application/frontend. | 07/29/2026 | 07/29/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Learn Amazon Cognito concepts and set up a Cognito User Pool for user sign-up/sign-in. | 07/30/2026 | 07/30/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - Integrate Cognito authentication into the application (login, token verification). | 07/31/2026 | 07/31/2026 | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to Implement This Week:
+| Day | Tasks | Start Date | Completion Date | Reference Documentation |
+| --- | ----- | ---------- | --------------- | ----------------------- |
+| Mon | - Learn Containerization concepts & compare Docker with Virtual Machines (EC2) <br> - Write a simple `Dockerfile` to containerize a web application (Node.js/Python/React) | 13/07/2026 | 13/07/2026 | |
+| Tue | - Learn about AWS ECR (Docker Image registry) <br> - **Hands-on practice:** Create an ECR Repository, log in via AWS CLI, and push a Docker Image to ECR | 14/07/2026 | 14/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Wed, Thu | - Learn about AWS App Runner (a fully managed service for developers to run containers without managing infrastructure) <br> - **Hands-on practice:** Configure App Runner to pull images from ECR and automatically deploy the web application to the internet | 15/07/2026 | 16/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Fri, Sat | - **Hands-on practice:** Test the App Runner Public URL and configure environment variables for the container | 17/07/2026 | 18/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 7 Achievements:
 
-* Implemented and deployed a Lambda function, connected through API Gateway and callable from the application.
-* Set up Amazon Cognito for user authentication, allowing users to sign up, sign in, and access protected parts of the application.
-* Verified the recommended-tier services (Lambda, API Gateway, Cognito) integrate correctly with the existing EC2/RDS/DynamoDB/S3 architecture.
+* Successfully containerized a software application into a standard Docker Image.
+* Safely stored and managed Container Image versions on AWS ECR.
+* Fully deployed a containerized web application to the cloud environment using AWS App Runner.

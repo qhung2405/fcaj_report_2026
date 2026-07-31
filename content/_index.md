@@ -14,19 +14,19 @@ chapter: false
 
 &emsp; **Phone Number:** 0866826237 
 
-&emsp; **Email:** quanghungnguyen2405@gmail.com
+&emsp; **Email:** hung.nguyenquang2405@hcmut.edu.vn
 
 &emsp; **University:** Ho Chi Minh City University of Technology 
 
 &emsp; **Major:** Computer Engineering
 
-&emsp; **Class:** MT23KTM1
+&emsp; **Class:** AWS062026
 
 &emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
 
 &emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Internship Duration:** From 15/06/2026 to 14/08/2026
+&emsp; **Internship Duration:** From 01/06/2026 to 14/08/2026
 
 
 ![Your profile picture]({{< relURL "images/avatar.png" >}})

@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 3. </b> "
 ---
 
-# Blogs Posted
-
 Below are the blog posts I published on [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj) throughout my internship at Amazon Web Services Vietnam.
 
 ### [Blog 1 - INTRODUCING AMAZON VPC REGIONAL NAT GATEWAY](3.1-blog1/)

@@ -1,29 +1,29 @@
 ---
 title: "Week 5 Worklog"
-date: 2026-07-13
+date: 2026-06-29
 weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
 
-
 ### Week 5 Objectives:
 
-* Design the database schema for the web application's core data.
-* Provision a managed relational database using Amazon RDS in the private subnet and connect it to the application securely.
+* Adopt the Serverless Architecture mindset on AWS.
+* Get familiar with basic AWS Lambda for building API backends.
+* Provision and configure simple HTTP APIs / REST APIs via Amazon API Gateway.
 
-### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | --- | --- | --- | --- |
-| 2 | - Design the database schema (tables, relationships) for the application. | 07/13/2026 | 07/13/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Learn Amazon RDS concepts and provision an RDS instance (MySQL/PostgreSQL) in the private subnet. | 07/14/2026 | 07/14/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Restrict database access to the app server's Security Group only. | 07/15/2026 | 07/15/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Configure database credentials securely (environment variables or AWS Secrets Manager) and connect the application to RDS. | 07/16/2026 | 07/16/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - Test create/read/update/delete (CRUD) operations through the application. | 07/17/2026 | 07/17/2026 | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to Implement This Week:
+| Day | Tasks | Start Date | Completion Date | Reference Documentation |
+| --- | ----- | ---------- | --------------- | ----------------------- |
+| Mon | - Learn about the Serverless Computing model <br> - Learn basic AWS Lambda concepts (Triggers, Execution Role, Handlers) | 29/06/2026 | 29/06/2026 | |
+| Tue | - **Hands-on practice:** <br>&emsp; + Write a simple Lambda function (Node.js/Python) that returns JSON data | 30/06/2026 | 30/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Wed, Thu | - Learn an overview of Amazon API Gateway: <br>&emsp; + REST API vs. HTTP API vs. WebSocket API <br>&emsp; + Resources, Methods (GET, POST, PUT, DELETE) <br>&emsp; + Integration Types (Lambda Integration, HTTP Endpoint, AWS Service) | 01/07/2026 | 02/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Fri, Sat | - **Hands-on practice:** <br>&emsp; + Create a new REST API on the API Gateway Console <br>&emsp; + Create the `/users` Resource and GET, POST Methods <br>&emsp; + Create Deployment Stages (dev, prod) <br>&emsp; + Test API endpoints using Postman / cURL via Public URL | 03/07/2026 | 04/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 5 Achievements:
 
-* Designed and implemented the database schema 
-* Provisioned an RDS instance in the private subnet, accessible only from the application's Security Group.
-* Successfully connected the application to RDS and verified CRUD operations work correctly.
+* Understood the design mindset of Serverless architecture without managing physical or virtual servers.
+* Successfully wrote and deployed Serverless Functions using AWS Lambda.
+* Grasped the fundamental request/response processing flow of Amazon API Gateway.
+* Successfully built and deployed public API endpoints directly integrated with an AWS Lambda backend.

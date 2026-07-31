@@ -19,7 +19,7 @@ Add the following IAM permission policy to your user account to deploy and clean
                 "cloudformation:*",
                 "cloudwatch:*",
                 "ec2:AcceptTransitGatewayPeeringAttachment",
-                "ec2:AcceptTransitGatewayVpcAttachment",
+                "ec2:AcceptTransitGatewayVpcAttachment", 
                 "ec2:AllocateAddress",
                 "ec2:AssociateAddress",
                 "ec2:AssociateIamInstanceProfile",
@@ -222,21 +222,21 @@ In this lab, we will use **N.Virginia region (us-east-1)**.
 
 To prepare the workshop environment, deploy this **CloudFormation Template** (click link): [PrivateLinkWorkshop ](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.us-east-1.amazonaws.com/reinvent-endpoints-builders-session/Nested.yaml&stackName=PLCloudSetup). Accept all of the defaults when deploying the template. 
 
-![create stack]({{< relURL "images/5-Workshop/5.2-Prerequisite/create-stack1.png" >}})
+![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack1.png)
 
 + Tick 2 acknowledgement boxes
 + Choose **Create stack**
 
-![create stack]({{< relURL "images/5-Workshop/5.2-Prerequisite/create-stack2.png" >}})
+![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack2.png)
 
 The **ClouddFormation** deployment requires about 15 minutes to complete.
 
-![complete]({{< relURL "images/5-Workshop/5.2-Prerequisite/complete.png" >}})
+![complete](/images/5-Workshop/5.2-Prerequisite/complete.png)
 
 + **2 VPCs** have been created
 
-![vpcs]({{< relURL "images/5-Workshop/5.2-Prerequisite/vpcs.png" >}})
+![vpcs](/images/5-Workshop/5.2-Prerequisite/vpcs.png)
 
 + **3 EC2s** have been created
 
-![EC2]({{< relURL "images/5-Workshop/5.2-Prerequisite/ec2.png" >}})
+![EC2](/images/5-Workshop/5.2-Prerequisite/ec2.png)

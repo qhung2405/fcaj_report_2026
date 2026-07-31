@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 3. </b> "
 ---
 
-# Các bài blogs đã đăng
-
 Dưới đây là các bài blog em đã đăng trên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj) trong suốt quá trình thực tập tại Amazon Web Services Việt Nam.
 
 ### [Blog 1 - GIỚI THIỆU AMAZON VPC REGIONAL NAT GATEWAY](3.1-blog1/)

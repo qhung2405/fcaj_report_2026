@@ -35,6 +35,10 @@ Nếu hệ thống của bạn gồm nhiều service cần "biết" về sự ki
 
 ![Blog 3]({{< relURL "images/image3.png" >}})
 
+<p style="font-size: 1rem; font-weight: normal;">
+  <a href="https://www.facebook.com/share/p/18qszRmJAL/">Xem bài đăng trên AWS Study Group</a>
+</p>
+
 ---
 
 ### Nguồn tham khảo

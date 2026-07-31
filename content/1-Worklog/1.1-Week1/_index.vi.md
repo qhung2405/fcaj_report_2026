@@ -1,32 +1,32 @@
 ---
 title: "Worklog Tuần 1"
-date: 2026-06-15
+date: 2024-06-01
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-
 ### Mục tiêu tuần 1:
 
-* Kết nối, làm quen với chương trình thực tập và Đề tài 3: Xây dựng và triển khai ứng dụng web trên AWS.
-* Chốt ý tưởng ứng dụng web và công nghệ sử dụng (Python/FastAPI hoặc Node.js).
-* Tạo tài khoản AWS Free Tier và thiết lập bảo mật cơ bản cho tài khoản (bật MFA cho root, tạo IAM).
+* Tìm nhóm thực hiện project
+* Hiểu tổng quan Điện toán đám mây là gì và cách hoạt động của AWS.
+* Làm quen giao diện quản lý AWS Management Console.
+* Nắm vững cách quản lý người dùng và phân quyền cơ bản với AWS IAM.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | --- | --- | --- | --- |
-| 2 | - Rà soát yêu cầu đề tài và chia nhỏ kế hoạch 8 tuần.<br> - Quyết định ý tưởng ứng dụng web và ngôn ngữ/framework sử dụng. | 15/06/2026 | 15/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Tạo tài khoản AWS Free Tier.<br> - Bật MFA cho tài khoản root. | 16/06/2026 | 16/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Tìm hiểu về IAM.<br> - Tạo IAM user/group và áp dụng chính sách quyền hạn tối thiểu. | 17/06/2026 | 17/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Cài đặt và cấu hình AWS CLI.<br> - Kiểm tra kết nối . | 18/06/2026 | 18/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - Thiết lập repository dự án (Git).<br> - Thiết lập môi trường phát triển trong VSCode. | 19/06/2026 | 19/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập | 01/06/2026   | 01/06/2026      | [Nội quy](<https://hcm-rules.awsfcaj.com/>) |
+| 3   | - Tìm hiểu Điện toán đám mây là gì & Lợi ích của Cloud <br>  - Đăng ký tài khoản AWS Free Tier | 02/06/2026   | 02/06/2026      | [- Giới thiệu về điện toán đám mây](<https://youtube.com/playlist?list=PLdwqw0JzwbG7GCKA9bzUHhtqfJba4sllb&si=hDtv67NJfp8fcnc4>) <br> [- Đăng ký tài khoản AWS](<https://000001.awsstudygroup.com/3-chi%E1%BA%BFn-l%C6%B0%E1%BB%A3c-nh%E1%BA%ADn-%C4%91%E1%BB%A7-200-credit/>)|
+| 4   | - Làm quen với giao diện AWS Console <br> - Bật bảo mật 2 lớp (MFA) cho tài khoản Root | 03/06/2026   | 03/06/2026      | [MFA](<https://youtu.be/zmVIebov_9g?si=Z6k-jFc6_0pfUBrI>) |
+| 5   | - Tìm hiểu khái niệm AWS IAM: Users, Groups, Policies <br> - **Thực hành:** Tạo IAM User mới trên Console và cấp quyền truy cập| 04/06/2026   | 04/06/2026 | [- AWS IAM, Root User vs IAM User](<https://youtu.be/RVDwsmyFA-Q?si=gH8xQR1OZeUSyosa>) <br> [- AWS managed policy vs Custom Policy vs Inline Policy](<https://youtu.be/MoHswdLFXT0?si=dJdKuOXu83hlKT9_>)|
+| 6   | - Tìm hiểu dịch vụ máy chủ ảo EC2 cơ bản <br> - **Thực hành:** Tạo 1 máy chủ ảo EC2 (Linux/Windows) đơn giản bằng giao diện Web | 05/06/2025   | 05/06/2025      | [Task 1: Launch EC2 Instance - $20 credit](<https://000001.awsstudygroup.com/4-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-chi-ti%E1%BA%BFt-5-nhi%E1%BB%87m-v%E1%BB%A5-ki%E1%BA%BFm-ti%E1%BB%81n/>) |
 
 
 ### Kết quả đạt được tuần 1:
 
-
-* Đã tạo tài khoản AWS Free Tier và bật MFA cho tài khoản root.
-* Đã tạo IAM user/group với quyền hạn tối thiểu, không dùng tài khoản root cho công việc hằng ngày.
-* Đã cài đặt và cấu hình AWS CLI trên máy local, kiểm tra kết nối thành công.
-* Đã thiết lập môi trường phát triển trong VSCode, khởi tạo repository dự án.
+* Đã tìm được nhóm để thực hiện project
+* Đã đăng ký và bảo mật thành công tài khoản AWS Free Tier.
+* Biết cách sử dụng dịch vụ IAM để tạo User mới, phân Group và gán quyền cơ bản.
+* Thành thạo đăng nhập và thao tác trên giao diện AWS Management Console.
+* Tự tay khởi tạo thành công một máy chủ EC2 đơn giản.
